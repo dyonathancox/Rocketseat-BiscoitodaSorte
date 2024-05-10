@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+    --color-text: #34355B;
+    --button: #FF9500;
+    --bg-phrase: #E4EDF1;
+    --bg-body: linear-gradient(54deg, rgba(25,3,97,1) 0%, rgba(187,0,255,1) 100%);
+}
+body{
+    height: 45.2vw;
+    background: var(--bg-body);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "DM Sans", sans-serif;
+}
+main{
+    background: white;
+    box-shadow: 0rem 2rem 5rem rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    padding: 4.8rem 6.4rem 6.4rem;
+    text-align: center;
+    width: min(43rem, 90%);
+    color: var(--color-text);
+}
+main h1{
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    font-weight: bold;
+}
+main p{
+    font-size: 1.6rem;
+    margin: 1.5rem 2rem;
+    line-height: 2.0rem;
+
+}
+div.hide{
+    display: none;
+}
+
+.screen-1 svg {
+    cursor: pointer;
+}
+.screen-1 svg:hover {
+    -webkit-animation: v8 3s linear infinite both;
+    animation: v8 0.3s linear infinite both;
+}
+.screen-2{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.screen-2 p{
+    color: #000;
+    background-color: var(--bg-phrase);
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-size: 2.4rem;
+    box-shadow: 0rem 2rem 5rem rgba(0, 0, 0, 0.5);
+    animation: down 1.5s both;
+    margin: 1.7rem;
+    padding: 1.7rem;
+    border-radius: 1rem;
+}
+
+.screen-2 button {
+    font-family: 'DM Sans', sans-serif;
+    color: #fff;
+    margin-top: 2.5rem;
+    font-size: 1.6rem;
+    background-color: var(--button);
+    border-radius: 4px;
+    padding: 1.8rem;
+    border: none;
+    cursor: pointer;
+    transition: filter 300ms;
+}
+    
+.screen-2 button:hover {
+    filter: brightness(0.9);
+}
+
+
+/*ANIMAÇÃO DO BISCOITO SE MEXENDO*/
+@keyframes v8 {
+    0% {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-2px, 2px);
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      -webkit-transform: translate(-2px, -2px);
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      -webkit-transform: translate(2px, 2px);
+      transform: translate(2px, 2px);
+    }
+    80% {
+      -webkit-transform: translate(2px, -2px);
+      transform: translate(2px, -2px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+      transform: translate(0);
+    }
+}
+    
+@keyframes down {
+    0% {
+        transform: scale(.4) translateY(400px) ;
+    }100% {
+        transform: scale(1) translateY(0);
+    }
+}
